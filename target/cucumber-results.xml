@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="34.655" tests="8" skipped="0" failures="0" errors="0">
-<testcase classname="Verify and manage course header details" name="Verify and manage course header" time="4.157">
+<testsuite name="Cucumber" time="32.709" tests="8" skipped="0" failures="0" errors="0">
+<testcase classname="Verify and manage course header details" name="Verify and manage course header" time="4.181">
 <system-out><![CDATA[
 Given the admin is on the homepage..........................................passed
 When the admin selects the login option.....................................passed
@@ -15,7 +15,7 @@ And the course actions should be "Actions"..................................pass
 Then the elements of the header should be displayed.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Course management" name="Admin adds a new Course - Example #1.1" time="4.478">
+<testcase classname="Course management" name="Admin adds a new Course - Example #1.1" time="4.476">
 <system-out><![CDATA[
 Given the admin is on the homepage..........................................passed
 When the admin selects the login option.....................................passed
@@ -33,7 +33,7 @@ And the admin clicks on the add button......................................pass
 Then the course is added....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Courses Pagination" name="Navigation between courses pages" time="3.532">
+<testcase classname="Courses Pagination" name="Navigation between courses pages" time="3.453">
 <system-out><![CDATA[
 Given the admin is on the homepage..........................................passed
 When the admin selects the login option.....................................passed
@@ -46,7 +46,7 @@ When The admin clicks the left arrow to go back to the previous page........pass
 Then The previous page of courses is displayed..............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Course Search Feature for Admins on Talan Academy" name="Verify course search functionality - Example #1.1" time="6.623">
+<testcase classname="Course Search Feature for Admins on Talan Academy" name="Verify course search functionality - Example #1.1" time="3.931">
 <system-out><![CDATA[
 Given the admin is on the homepage..........................................passed
 When the admin selects the login option.....................................passed
@@ -58,7 +58,7 @@ And the admin enters the course name Test et validation.....................pass
 Then the corresponding course should be displayed...........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Course Search Feature for Admins on Talan Academy" name="Verify clearing search field - Example #1.1" time="4.268">
+<testcase classname="Course Search Feature for Admins on Talan Academy" name="Verify clearing search field - Example #1.1" time="4.161">
 <system-out><![CDATA[
 Given the admin is on the homepage..........................................passed
 When the admin selects the login option.....................................passed
@@ -71,7 +71,7 @@ And the admin clears the course name........................................pass
 Then the initial page should be displayed...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Course Search Feature for Admins on Talan Academy" name="Verify clearing search field - Example #2.1" time="3.77">
+<testcase classname="Course Search Feature for Admins on Talan Academy" name="Verify clearing search field - Example #2.1" time="4.422">
 <system-out><![CDATA[
 Given the admin is on the homepage..........................................passed
 When the admin selects the login option.....................................passed
@@ -84,7 +84,7 @@ And the admin clears the course name........................................pass
 Then the initial page should be displayed...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Course Search Feature for Admins on Talan Academy" name="Verify message for inexistent course" time="4.126">
+<testcase classname="Course Search Feature for Admins on Talan Academy" name="Verify message for inexistent course" time="4.544">
 <system-out><![CDATA[
 Given the admin is on the homepage..........................................passed
 When the admin selects the login option.....................................passed
@@ -96,7 +96,7 @@ And the admin enters an inexistent course name "Diagramme"..................pass
 Then the message "aucun cursus trouvé" should be displayed..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="as an admin i want to access to the talan academy platform" name="verify login using correct credentials - Example #1.1" time="3.479">
+<testcase classname="as an admin i want to access to the talan academy platform" name="verify login using correct credentials - Example #1.1" time="3.307">
 <system-out><![CDATA[
 Given the admin is on the homepage..........................................passed
 When the admin selects the login option.....................................passed
