@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="8.087" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="Verify and manage course header details" name="Verify and manage course header" time="7.923">
-<failure type="org.junit.ComparisonFailure" message="expected:&lt;C[ursus]&gt; but was:&lt;C[ourse]&gt;">
-<![CDATA[org.junit.ComparisonFailure: expected:<C[ursus]> but was:<C[ourse]>
+<testsuite name="Cucumber" time="32.75" tests="8" skipped="0" failures="1" errors="0">
+<testcase classname="Verify and manage course header details" name="Verify and manage course header" time="4.396">
+<failure type="org.junit.ComparisonFailure" message="expected:&lt;Act[]&gt; but was:&lt;Act[ions]&gt;">
+<![CDATA[org.junit.ComparisonFailure: expected:<Act[]> but was:<Act[ions]>
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at projectfinal.pages.AffichageCursus.verifyTitle(AffichageCursus.java:23)
-	at projectfinal.stepsdef.AffchageSteps.the_course_title_should_be(AffchageSteps.java:16)
-	at ✽.the course title should be "Course"(file:///C:/Users/otaalaoui/Desktop/space/ProjetFinal/src/test/resources/Features/Affichage.feature:12)
+	at projectfinal.pages.AffichageCursus.verifyActions(AffichageCursus.java:47)
+	at projectfinal.stepsdef.AffchageSteps.the_course_actions_should_be(AffchageSteps.java:36)
+	at ✽.the course actions should be "Actions"(file:///C:/Users/otaalaoui/Desktop/space/ProjetFinal/src/test/resources/Features/Affichage.feature:16)
 ]]>
 </failure>
 <system-out><![CDATA[
@@ -16,12 +16,102 @@ When the admin selects the login option.....................................pass
 And the admin inputs their mouna.makni@talan.com and Admin09$...............passed
 And the admin selects the login button......................................passed
 When the admin clicks on Cursus in the dashboard menu.......................passed
-And the course title should be "Course".....................................failed
-And the course description should be "Description"..........................skipped
-And the tags associated with the course should be "Tags"....................skipped
-And the course visibility should be "Visibility"............................skipped
-And the course actions should be "Actions"..................................skipped
+And the course title should be "Course".....................................passed
+And the course description should be "Description"..........................passed
+And the tags associated with the course should be "Tags"....................passed
+And the course visibility should be "Visibility"............................passed
+And the course actions should be "Actions"..................................failed
 Then the elements of the header should be displayed.........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Course management" name="Admin adds a new Course - Example #1.1" time="4.565">
+<system-out><![CDATA[
+Given the admin is on the homepage..........................................passed
+When the admin selects the login option.....................................passed
+And the admin inputs their mouna.makni@talan.com and Admin09$...............passed
+And the admin selects the login button......................................passed
+When the admin clicks on Cursus in the dashboard menu.......................passed
+And the admin clicks on the Add Course option...............................passed
+And the admin enters the title java/springboot..............................passed
+And the admin enters the visibility oui.....................................passed
+And the admin enters the description ce cursus contient le cours sur le framework spring.passed
+And the admin enters the imageurl https://geekflare.com/wp-content/uploads/2022/09/Verification-vs.-Validation-in-Software-Testing-Know-the-Basics-1.png.passed
+And the admin enters the numberofdays 30....................................passed
+And the admin enters the tagsname SQL,DataBase..............................passed
+And the admin clicks on the add button......................................passed
+Then the course is added....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Courses Pagination" name="Navigation between courses pages" time="3.658">
+<system-out><![CDATA[
+Given the admin is on the homepage..........................................passed
+When the admin selects the login option.....................................passed
+And the admin inputs their mouna.makni@talan.com and Admin09$...............passed
+And the admin selects the login button......................................passed
+When the admin clicks on Cursus in the dashboard menu.......................passed
+When The admin clicks the right arrow to go to the next page................passed
+Then The next page of courses is displayed..................................passed
+When The admin clicks the left arrow to go back to the previous page........passed
+Then The previous page of courses is displayed..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Course Search Feature for Admins on Talan Academy" name="Verify course search functionality - Example #1.1" time="4.747">
+<system-out><![CDATA[
+Given the admin is on the homepage..........................................passed
+When the admin selects the login option.....................................passed
+And the admin inputs their mouna.makni@talan.com and Admin09$...............passed
+And the admin selects the login button......................................passed
+When the admin clicks on Cursus in the dashboard menu.......................passed
+When the admin selects the course search option.............................passed
+And the admin enters the course name Test et validation.....................passed
+Then the corresponding course should be displayed...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Course Search Feature for Admins on Talan Academy" name="Verify clearing search field - Example #1.1" time="4.252">
+<system-out><![CDATA[
+Given the admin is on the homepage..........................................passed
+When the admin selects the login option.....................................passed
+And the admin inputs their mouna.makni@talan.com and Admin09$...............passed
+And the admin selects the login button......................................passed
+When the admin clicks on Cursus in the dashboard menu.......................passed
+When the admin selects the course search option.............................passed
+And the admin enters the course name Test et validation.....................passed
+And the admin clears the course name........................................passed
+Then the initial page should be displayed...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Course Search Feature for Admins on Talan Academy" name="Verify clearing search field - Example #2.1" time="3.973">
+<system-out><![CDATA[
+Given the admin is on the homepage..........................................passed
+When the admin selects the login option.....................................passed
+And the admin inputs their mouna.makni@talan.com and Admin09$...............passed
+And the admin selects the login button......................................passed
+When the admin clicks on Cursus in the dashboard menu.......................passed
+When the admin selects the course search option.............................passed
+And the admin enters the course name Test et validation.....................passed
+And the admin clears the course name........................................passed
+Then the initial page should be displayed...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Course Search Feature for Admins on Talan Academy" name="Verify message for inexistent course" time="3.63">
+<system-out><![CDATA[
+Given the admin is on the homepage..........................................passed
+When the admin selects the login option.....................................passed
+And the admin inputs their mouna.makni@talan.com and Admin09$...............passed
+And the admin selects the login button......................................passed
+When the admin clicks on Cursus in the dashboard menu.......................passed
+When the admin selects the course search option.............................passed
+And the admin enters an inexistent course name "Diagramme"..................passed
+Then the message "aucun cursus trouvé" should be displayed..................passed
+]]></system-out>
+</testcase>
+<testcase classname="as an admin i want to access to the talan academy platform" name="verify login using correct credentials - Example #1.1" time="3.289">
+<system-out><![CDATA[
+Given the admin is on the homepage..........................................passed
+When the admin selects the login option.....................................passed
+And the admin inputs their mouna.makni@talan.com and Admin09$...............passed
+And the admin selects the login button......................................passed
+Then the admin should be directed to the dashboard..........................passed
 ]]></system-out>
 </testcase>
 </testsuite>
