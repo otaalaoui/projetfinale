@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features = "src/test/resources/Features", glue = {
 		"projectfinal.stepsdef" }, monochrome = true, plugin = {
 				"pretty", "html:target/cucumber-reports.html", "json:target/cucumber.json","json:target/rapport.json",
-				"junit:target/cucumber-results.xml" }, tags = "")
+				"junit:target/cucumber-results.xml" }, tags = " @HeaderElementsDisplay")
 public class RunnerTe {
 
 }

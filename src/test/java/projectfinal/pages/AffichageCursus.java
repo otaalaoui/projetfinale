@@ -20,7 +20,7 @@ public class AffichageCursus {
 	public void verifyTitle() {
 		WebElement titleElement = driver.findElement(text_titre);
 		String titleText = titleElement.getText();
-		Assert.assertEquals("Course", titleText);
+		Assert.assertEquals("Cursus", titleText);
 	}
 
 	public void verifyDescription() {
